@@ -22,9 +22,9 @@ function App() {
       <Wrapper>
         <Navbar />
 
-        <Outlet />
+        {/* <Outlet /> */}
 
-        <Footer />
+        {/* <Footer />/ */}
       </Wrapper>
     </Container>
   );
