@@ -6,7 +6,7 @@ import { stepDetailType } from "src/types/pricingTypes";
 
 const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, startUrl, title, photo, markedWord }) => {
   return (
-    <FlexBetween mt="50px" position="relative">
+    <FlexBetween mt="50px" position="relative" mb="90px">
       <Stack width="45%">
         <Text fw="500" fs="30px">
           {name}
@@ -37,9 +37,10 @@ const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, sta
           </a>
         </FlexWrapper>
       </Stack>
-      <Box position="absolute" right="-140px">
+      <Box position="absolute" right="-140px" zIndex={1}>
         <img src={photo} alt="" />
       </Box>
+      <Box width="309px" height="276px" bgcolor="#8B8B8B" position="absolute" bottom="-120px" right="50px" />
     </FlexBetween>
   );
 };
