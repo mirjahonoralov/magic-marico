@@ -6,6 +6,7 @@ import stepOneInfoImg from "@assets/stepOneInfoImg.png";
 import mobile from "@assets/mobile.png";
 import { FlexBetween } from "@styles/Flex";
 import { Text } from "@styles/globalStyle";
+import CustomButton from "@components/common/CustomButton";
 
 const stepInfo: stepInfoType[] = [
   {
@@ -62,7 +63,7 @@ const Steps = () => {
 
       {/* step 2 */}
       <StepInfo {...stepInfo[1]} />
-      <Stack>
+      <Stack gap="40px">
         <FlexBetween gap="20px">
           <Stack width="50%" p="30px" bgcolor="#0D0D0D" position="relative" minHeight="650px">
             <Text fs="30px" c="#0FC65C">
@@ -90,6 +91,8 @@ const Steps = () => {
             </Text>
           </Stack>
         </FlexBetween>
+
+        <CustomButton sx={{ width: "300px", mx: "auto" }}>Get Started</CustomButton>
       </Stack>
 
       {/* step 3 */}
