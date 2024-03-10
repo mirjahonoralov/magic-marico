@@ -3,21 +3,7 @@ import { FlexBetween, FlexWrapper } from "../styles/Flex";
 import logo from "@assets/logo.svg";
 import CustomButton from "./common/CustomButton";
 import { Link, useLocation } from "react-router-dom";
-
-const menus = [
-  {
-    path: "about",
-    name: "About",
-  },
-  {
-    path: "pricing",
-    name: "Pricing",
-  },
-  {
-    path: "blog",
-    name: "Blog",
-  },
-];
+import { menus } from "@data/index";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -30,7 +16,7 @@ const Navbar = () => {
         </Text>
       </FlexWrapper>
       <FlexWrapper color="#fff" gap="30px">
-        {menus.map((item) => (
+        {menus.slice(0, 3).map((item) => (
           <Link to={item.path} key={item.path}>
             <Text fs="20px" c={pathname === "/" + item.path ? "var(--primary)" : "#707070"} fw="500">
               {item.name}

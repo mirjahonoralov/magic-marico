@@ -28,7 +28,8 @@
       "@pages/*": ["./src/pages/*"],
       "@routes/*": ["./src/routes/*"],
       "@styles/*": ["./src/styles/*"],
-      "@src/*": ["./src/src/*"]
+      "@src/*": ["./src/src/*"],
+      "@data/*": ["./src/data/*"]
     }
   },
   "include": ["src"],

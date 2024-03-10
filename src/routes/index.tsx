@@ -1,6 +1,7 @@
 import Pricing from "@pages/Pricing";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
+import { Box } from "@mui/material";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/*",
-        element: <h2 style={{ color: "#fff", marginTop: "40px" }}>Page not found (-_-)</h2>,
+        element: (
+          <Box component="h1" color="#fff" mt="50px" height="500px">
+            Page not found (-_-)
+          </Box>
+        ),
       },
     ],
   },
