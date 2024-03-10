@@ -1,12 +1,12 @@
 import CustomButton from "@components/common/CustomButton";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { FlexBetween, FlexWrapper } from "@styles/Flex";
 import { Text } from "@styles/globalStyle";
 import { stepDetailType } from "src/types/pricingTypes";
 
 const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, startUrl, title, photo, markedWord }) => {
   return (
-    <FlexBetween mt="50px">
+    <FlexBetween mt="50px" position="relative">
       <Stack width="45%">
         <Text fw="500" fs="30px">
           {name}
@@ -37,7 +37,9 @@ const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, sta
           </a>
         </FlexWrapper>
       </Stack>
-      <img src={photo} alt="" />
+      <Box position="absolute" right="-140px">
+        <img src={photo} alt="" />
+      </Box>
     </FlexBetween>
   );
 };
