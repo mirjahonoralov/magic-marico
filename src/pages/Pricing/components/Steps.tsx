@@ -59,7 +59,7 @@ const Steps = () => {
     <Stack mt="150px" gap="80px">
       {/* step 1 */}
       <StepInfo {...stepInfo[0]} />
-      {/* <StepDetail {...stepsDetailInfo[0]} /> */}
+      <StepDetail {...stepsDetailInfo[0]} />
 
       {/* step 2 */}
       <StepInfo {...stepInfo[1]} />
@@ -109,7 +109,7 @@ const Steps = () => {
       </Stack>
 
       {/* step 3 */}
-      {/* <StepDetail {...stepsDetailInfo[1]} /> */}
+      <StepDetail {...stepsDetailInfo[1]} />
     </Stack>
   );
 };

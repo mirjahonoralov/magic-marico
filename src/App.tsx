@@ -10,22 +10,14 @@ const Container = styled(Box)({
   backgroundColor: "#000",
 });
 
-const Wrapper = styled(Box)({
-  width: "100%",
-  maxWidth: "1640px",
-  margin: "30px 0",
-  overflow: "hidden",
-  padding: "0 20px",
-});
-
 function App() {
   return (
     <Container>
-      <Wrapper>
+      <Box sx={{ width: "100%", padding: { md: "30px", xs: "20px" }, maxWidth: { md: "1700px", xs: "1680px" } }}>
         <Navbar />
         <Outlet />
-        <Footer />/
-      </Wrapper>
+        <Footer />
+      </Box>
     </Container>
   );
 }

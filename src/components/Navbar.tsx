@@ -58,7 +58,7 @@ const Navbar = () => {
       <Drawer open={openDrawer} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
-      <FlexBetween p="20px">
+      <FlexBetween>
         <FlexWrapper gap="10px">
           <Box component="img" src={logo} alt="" width={{ sm: "42px", xs: "30px" }} />
           <Text fontSize={{ sm: "37px", xs: "25px" }} c="#fff" fw="800">
