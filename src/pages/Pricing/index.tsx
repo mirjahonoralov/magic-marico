@@ -8,7 +8,7 @@ const Pricing = () => {
     <Box mt="50px">
       <Main />
       <Steps />
-      <Extra />
+      {/* <Extra /> */}
     </Box>
   );
 };

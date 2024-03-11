@@ -9,11 +9,11 @@ const Footer = () => {
   const { pathname } = useLocation();
 
   return (
-    <FlexBetween mt="80px">
+    <FlexBetween mt="80px" gap={{ sm: "0", xs: "15px" }} flexDirection={{ sm: "row", xs: "column" }}>
       <Stack gap="10px">
         <FlexWrapper gap="10px">
-          <Box component="img" src={footerLogo} alt="" />
-          <Text fw="800" fs="42px">
+          <Box component="img" src={footerLogo} alt="" width={{ md: "47px", xs: "30px" }} />
+          <Text fw="800" fontSize={{ md: "42px", xs: "30px" }}>
             Marico
           </Text>
         </FlexWrapper>
@@ -22,7 +22,7 @@ const Footer = () => {
         </Box>
       </Stack>
 
-      <FlexWrapper color="#fff" gap="30px">
+      <FlexWrapper color="#fff" columnGap="30px" rowGap="10px" flexWrap="wrap">
         {menus.map((item) => (
           <Link to={item.path} key={item.path}>
             <Text fs="20px" c={pathname === "/" + item.path ? "var(--primary)" : "#707070"} fw="500">

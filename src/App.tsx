@@ -14,6 +14,8 @@ const Wrapper = styled(Box)({
   width: "100%",
   maxWidth: "1640px",
   margin: "30px 0",
+  overflow: "hidden",
+  padding: "0 20px",
 });
 
 function App() {
@@ -21,10 +23,8 @@ function App() {
     <Container>
       <Wrapper>
         <Navbar />
-
-        {/* <Outlet /> */}
-
-        {/* <Footer />/ */}
+        <Outlet />
+        <Footer />/
       </Wrapper>
     </Container>
   );

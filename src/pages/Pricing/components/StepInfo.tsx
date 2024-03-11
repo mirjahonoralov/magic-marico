@@ -10,10 +10,15 @@ const StepInfo: React.FC<stepInfoType> = ({ desc, order, title, url }) => {
       <Text fw="600" fs="25px" c="var(--primary)">
         Step {order}
       </Text>
-      <Text fw="600" fs="75px">
+      <Text fw="600" fontSize={{ lg: "75px", md: "60px", xs: "40px" }} textAlign="center">
         {title}
       </Text>
-      <Text fs="30px" c="var(--text)" textAlign="center" width="60%">
+      <Text
+        fontSize={{ sm: "30px", xs: "20px" }}
+        c="var(--text)"
+        textAlign="center"
+        width={{ lg: "60%", md: "80%", xs: "90%" }}
+      >
         {desc}
       </Text>
       {url && (
