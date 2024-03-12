@@ -36,7 +36,7 @@ const Navbar = () => {
       onClick={toggleDrawer(false)}
     >
       <List>
-        {menus.map((item) => (
+        {menus.slice(0, 3).map((item) => (
           <ListItem key={item.path} disablePadding>
             <ListItemButton>
               <Link to={item.path}>
@@ -50,11 +50,11 @@ const Navbar = () => {
       </List>
       <Divider sx={{ bgcolor: "#fff" }} />
       <Stack gap="30px" width="200px" p="20px">
-        <Text fs="20px" c="#fff" fw="500" sx={{ cursor: "pointer" }}>
+        <Text fs="20px" c="#fff" fw="500" sx={{ cursor: "pointer" }} onClick={() => navigate("/sign-in")}>
           Login
         </Text>
 
-        <CustomButton>Sign Up</CustomButton>
+        <CustomButton onClick={() => navigate("/sign-up")}>Sign Up</CustomButton>
       </Stack>
     </Box>
   );

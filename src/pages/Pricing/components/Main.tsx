@@ -3,27 +3,7 @@ import { Box, Stack } from "@mui/material";
 import { FlexWrapper } from "@styles/Flex";
 import { Text } from "@styles/globalStyle";
 import dot from "@assets/dot.svg";
-import emoji1 from "@assets/emoji/1.svg";
-import emoji2 from "@assets/emoji/2.svg";
-import emoji3 from "@assets/emoji/3.svg";
-
-const reasons = [
-  {
-    icon: emoji1,
-    title: "Reduced Anxiety",
-    desc: "Never worry about losing your audience.",
-  },
-  {
-    icon: emoji2,
-    title: "Lower Workload",
-    desc: "Just share one link. We'll handle the rest.",
-  },
-  {
-    icon: emoji3,
-    title: "More Time",
-    desc: "Spend less time on marketing tools",
-  },
-];
+import { reasons } from "@data/index";
 
 const Main = () => {
   return (

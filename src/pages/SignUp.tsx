@@ -15,6 +15,7 @@ const SignUp = () => {
       alignItems="center"
       bgcolor="#000"
       color="#fff"
+      padding="15px"
     >
       <Box width="350px" border="1px solid #fff" p="20px" borderRadius="7px">
         <h1>Sign Up</h1>

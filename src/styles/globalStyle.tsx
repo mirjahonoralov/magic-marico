@@ -1,13 +1,6 @@
 import { Typography } from "@mui/material";
+import { textType } from "src/types/commonTypes";
 import styled from "styled-components";
-
-type textType = {
-  fs?: string;
-  c?: string;
-  fw?: string;
-  o?: string;
-  ff?: string;
-};
 
 export const Text = styled(Typography)<textType>`
   font-size: ${({ fs }) => fs} !important;
