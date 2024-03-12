@@ -2,15 +2,16 @@ import { Text } from "@styles/globalStyle";
 import { FlexBetween, FlexWrapper } from "../styles/Flex";
 import logo from "@assets/logo.svg";
 import CustomButton from "./common/CustomButton";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { menus } from "@data/index";
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Button, Divider, Drawer, List, ListItem, ListItemButton, Menu, MenuItem, Stack } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -19,6 +20,11 @@ const Navbar = () => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);
   const toggleDrawer = (newOpen: boolean) => () => setOpenDrawer(newOpen);
+
+  useEffect(() => {
+    if (pathname === "/") navigate("/pricing");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   const DrawerList = (
     <Box
@@ -59,12 +65,14 @@ const Navbar = () => {
         {DrawerList}
       </Drawer>
       <FlexBetween>
-        <FlexWrapper gap="10px">
-          <Box component="img" src={logo} alt="" width={{ sm: "42px", xs: "30px" }} />
-          <Text fontSize={{ sm: "37px", xs: "25px" }} c="#fff" fw="800">
-            Marico
-          </Text>
-        </FlexWrapper>
+        <Link to="/">
+          <FlexWrapper gap="10px">
+            <Box component="img" src={logo} alt="" width={{ sm: "42px", xs: "30px" }} />
+            <Text fontSize={{ sm: "37px", xs: "25px" }} c="#fff" fw="800">
+              Marico
+            </Text>
+          </FlexWrapper>
+        </Link>
         <FlexWrapper color="#fff" gap="39px" display={{ md: "flex", xs: "none" }}>
           <FlexWrapper gap="5px" mr="-20px">
             <Text
@@ -105,11 +113,11 @@ const Navbar = () => {
 
         <FlexWrapper gap="0">
           <FlexWrapper gap="24px" sx={{ display: { sm: "flex", xs: "none" } }}>
-            <Text fs="20px" c="#fff" fw="500" sx={{ cursor: "pointer" }}>
+            <Text fs="20px" c="#fff" fw="500" sx={{ cursor: "pointer" }} onClick={() => navigate("/sign-in")}>
               Login
             </Text>
 
-            <CustomButton>Sign Up</CustomButton>
+            <CustomButton onClick={() => navigate("/sign-up")}>Sign Up</CustomButton>
           </FlexWrapper>
           <Button onClick={toggleDrawer(true)} sx={{ display: { md: "none", xs: "block" } }}>
             <MenuIcon sx={{ color: "#fff" }} />
