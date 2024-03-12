@@ -9,7 +9,11 @@ const Footer = () => {
   const { pathname } = useLocation();
 
   return (
-    <FlexBetween mt="80px" gap={{ sm: "0", xs: "15px" }} flexDirection={{ sm: "row", xs: "column" }}>
+    <FlexBetween
+      mt={{ lg: "183px", md: "140px", sm: "80px", xs: "50px" }}
+      gap={{ sm: "0", xs: "15px" }}
+      flexDirection={{ sm: "row", xs: "column" }}
+    >
       <Stack gap="10px">
         <FlexWrapper gap="10px">
           <Box component="img" src={footerLogo} alt="" width={{ md: "47px", xs: "30px" }} />

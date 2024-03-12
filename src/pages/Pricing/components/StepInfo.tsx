@@ -6,7 +6,7 @@ import { stepInfoType } from "src/types/pricingTypes";
 
 const StepInfo: React.FC<stepInfoType> = ({ desc, order, title, url }) => {
   return (
-    <Stack gap="15px" alignItems="center">
+    <Stack alignItems="center" mt={{ lg: "189px", md: "140px", sm: "80px", xs: "40px" }}>
       <Text fw="600" fs="25px" c="var(--primary)">
         Step {order}
       </Text>
@@ -24,7 +24,7 @@ const StepInfo: React.FC<stepInfoType> = ({ desc, order, title, url }) => {
       {url && (
         <a href={url}>
           <CustomButton
-            sx={{ width: "300px", bgcolor: "transparent", border: "1px solid rgba(112, 112, 112, 1)" }}
+            sx={{ width: "300px", bgcolor: "transparent", border: "1px solid rgba(112, 112, 112, 1)", mt: "34px" }}
             variant="outlined"
           >
             View Avaliable Sources

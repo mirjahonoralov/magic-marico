@@ -9,8 +9,11 @@ import CustomButton from "@components/common/CustomButton";
 
 const Extra = () => {
   return (
-    <Stack gap="80px" mt="80px">
-      <Stack gap="30px">
+    <Stack
+      gap={{ lg: "188px", md: "140px", sm: "80px", xs: "60px" }}
+      mt={{ lg: "190px", md: "140px", sm: "80px", xs: "40px" }}
+    >
+      <Stack gap={{ md: "52px", xs: "30px" }}>
         <Text fw="600" fontSize={{ lg: "75px", md: "60px", xs: "40px" }} textAlign="center">
           Experts Agree
         </Text>
@@ -27,18 +30,24 @@ const Extra = () => {
         </Text>
       </FlexWrapper>
 
-      <Stack gap="20px" alignItems="center">
+      <Stack alignItems="center">
         <Box component="img" width={{ md: "164px", xs: "100px" }} src={logo} alt="" />
-        <Text fw="700" fontSize={{ lg: "100px", md: "80px", xs: "40px" }} lineHeight="100%" textAlign="center">
+        <Text
+          mt="20px"
+          fw="700"
+          fontSize={{ lg: "100px", md: "80px", xs: "40px" }}
+          lineHeight="100%"
+          textAlign="center"
+        >
           Get Started Now
         </Text>
         <Text fontSize={{ lg: "43px", md: "25px", xs: "20px" }} textAlign="center">
           Setup is easy and takes under 5 minutes.
         </Text>
-        <CustomButton>Get Started Now</CustomButton>
-        <FlexWrapper gap="10px">
+        <CustomButton sx={{ mt: "14px" }}>Get Started Now</CustomButton>
+        <FlexWrapper gap="10px" mt="26px">
           <Box component="img" src={dot} alt="" />
-          <Text fs="25px" c="rgba(112, 112, 112, 1)">
+          <Text fontSize={{ md: "25px", xs: "18px" }} c="rgba(112, 112, 112, 1)">
             <b style={{ color: "#fff" }}>1000+</b> creators have already started
           </Text>
         </FlexWrapper>

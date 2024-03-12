@@ -56,27 +56,27 @@ const stepsDetailInfo: stepDetailType[] = [
 
 const Steps = () => {
   return (
-    <Stack mt="150px" gap="80px">
+    <Stack>
       {/* step 1 */}
       <StepInfo {...stepInfo[0]} />
       <StepDetail {...stepsDetailInfo[0]} />
 
       {/* step 2 */}
       <StepInfo {...stepInfo[1]} />
-      <Stack gap="40px">
-        <FlexBetween gap="20px" flexDirection={{ lg: "row", xs: "column" }}>
+      <Stack gap={{ md: "49px", xs: "20px" }} mt={{ lg: "176px", md: "140px", sm: "80px", xs: "40px" }}>
+        <FlexBetween gap="23px" flexDirection={{ lg: "row", xs: "column" }}>
           <Stack
             width={{ lg: "50%", md: "70%", xs: "100%" }}
             p="30px"
             bgcolor="#0D0D0D"
             position="relative"
-            minHeight={{ lg: "650px", sm: "500px", xs: "400px" }}
+            minHeight={{ lg: "666px", sm: "500px", xs: "400px" }}
             overflow={{ lg: "initial", xs: "hidden" }}
           >
             <Text fs="30px" c="#0FC65C">
               One Link
             </Text>
-            <Text lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }} c="#919191" mt="40px">
+            <Text lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }} c="#919191" mt="24px">
               ALL You Create.
             </Text>
             <Text lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }}>
@@ -91,12 +91,12 @@ const Steps = () => {
             p="30px"
             bgcolor="#0D0D0D"
             position="relative"
-            minHeight={{ lg: "650px", sm: "500px", xs: "400px" }}
+            minHeight={{ lg: "666px", sm: "500px", xs: "400px" }}
           >
             <Text fs="30px" c="#0FC65C">
               Collect Subscribers
             </Text>
-            <Text mt="80px" lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }} c="#919191">
+            <Text mt="96px" lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }} c="#919191">
               Emails. <br /> Phone #s..
             </Text>
             <Text lineHeight="100%" fw="600" fontSize={{ lg: "80px", md: "60px", xs: "40px" }}>
@@ -109,6 +109,7 @@ const Steps = () => {
       </Stack>
 
       {/* step 3 */}
+      <StepInfo {...stepInfo[2]} />
       <StepDetail {...stepsDetailInfo[1]} />
     </Stack>
   );

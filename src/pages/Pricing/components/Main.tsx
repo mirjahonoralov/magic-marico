@@ -28,7 +28,12 @@ const reasons = [
 const Main = () => {
   return (
     <>
-      <Text fw="700" fontSize={{ lg: "112px", md: "70px", xs: "40px" }} textAlign="center">
+      <Text
+        fw="700"
+        fontSize={{ lg: "112px", md: "70px", xs: "40px" }}
+        textAlign="center"
+        mt={{ lg: "128px", md: "90px", sm: "50px", xs: "25px" }}
+      >
         Own your audience.
       </Text>
 
@@ -45,7 +50,7 @@ const Main = () => {
         So you don't lose them
       </Text>
 
-      <Stack gap="40px" color="#fff" alignItems="center">
+      <Stack gap="50px" color="#fff" alignItems="center" mt={{ lg: "136px", md: "80px", sm: "50px", xs: "25px" }}>
         <Text
           fw="500"
           fontSize={{ lg: "40px", md: "30px", xs: "20px" }}
@@ -54,8 +59,8 @@ const Main = () => {
         >
           Turn your audience into email and text message subscribers.
         </Text>
-        <Stack gap="40px" alignItems="center">
-          <FlexWrapper gap={{ md: "40px", xs: "20px" }} flexDirection={{ sm: "row", xs: "column" }}>
+        <Stack gap="21px" alignItems="center">
+          <FlexWrapper gap={{ md: "26px", xs: "15px" }} flexDirection={{ sm: "row", xs: "column" }}>
             <CustomButton sx={{ width: { md: "300px", xs: "250px" } }}>Get Started Now</CustomButton>
             <CustomButton
               sx={{
@@ -68,22 +73,22 @@ const Main = () => {
               View A Demo
             </CustomButton>
           </FlexWrapper>
-          <FlexWrapper gap="10px" width="80%" alignItems="start" justifyContent="center">
-            <Box component="img" mt="5px" src={dot} alt="" />
-            <Text fs="25px" c="rgba(112, 112, 112, 1)">
+          <FlexWrapper gap="10px" justifyContent="center">
+            <Box component="img" src={dot} alt="" />
+            <Text fontSize={{ md: "25px", xs: "18px" }} c="rgba(112, 112, 112, 1)">
               <b style={{ color: "#fff" }}>1000+</b> creators have already started
             </Text>
           </FlexWrapper>
         </Stack>
       </Stack>
 
-      <Stack gap="50px" alignItems="center" mt="150px">
+      <Stack gap="64px" alignItems="center" mt={{ lg: "188px", md: "140px", sm: "80px", xs: "40px" }}>
         <Text fw="600" fontSize={{ lg: "75px", md: "60px", xs: "40px" }} textAlign="center">
           Why Creators Love Marico
         </Text>
         <FlexWrapper gap="50px" p="0 20px" flexWrap={{ lg: "nowrap", xs: "wrap" }} justifyContent="center">
           {reasons.map((item, index) => (
-            <Stack key={index} gap="15px" alignItems="center">
+            <Stack key={index} gap="10px" alignItems="center">
               <FlexWrapper gap="10px">
                 <img src={item.icon} alt="" />
                 <Text fw="600" fontSize={{ sm: "35px", xs: "25px" }}>

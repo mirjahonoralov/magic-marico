@@ -9,7 +9,7 @@ const CustomButtonStyle = styled(Button)({
   fontSize: "20px",
   fontWeight: 500,
   textTransform: "capitalize",
-  padding: "10px 20px",
+  padding: "12px 20px",
   "&:hover": {
     backgroundColor: "var(--primary)",
   },

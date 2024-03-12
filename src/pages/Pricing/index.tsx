@@ -5,7 +5,7 @@ import Extra from "./components/Extra";
 
 const Pricing = () => {
   return (
-    <Box mt="50px">
+    <Box>
       <Main />
       <Steps />
       <Extra />

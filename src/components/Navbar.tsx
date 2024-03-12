@@ -65,8 +65,8 @@ const Navbar = () => {
             Marico
           </Text>
         </FlexWrapper>
-        <FlexWrapper color="#fff" gap="30px" display={{ md: "flex", xs: "none" }}>
-          <FlexWrapper gap="5px">
+        <FlexWrapper color="#fff" gap="39px" display={{ md: "flex", xs: "none" }}>
+          <FlexWrapper gap="5px" mr="-20px">
             <Text
               aria-controls={open ? "basic-menu" : undefined}
               aria-haspopup="true"
@@ -104,7 +104,7 @@ const Navbar = () => {
         </FlexWrapper>
 
         <FlexWrapper gap="0">
-          <FlexWrapper gap="30px" sx={{ display: { sm: "flex", xs: "none" } }}>
+          <FlexWrapper gap="24px" sx={{ display: { sm: "flex", xs: "none" } }}>
             <Text fs="20px" c="#fff" fw="500" sx={{ cursor: "pointer" }}>
               Login
             </Text>

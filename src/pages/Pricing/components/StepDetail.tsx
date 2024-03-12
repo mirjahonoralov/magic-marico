@@ -7,21 +7,20 @@ import { stepDetailType } from "src/types/pricingTypes";
 const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, startUrl, title, photo, markedWord }) => {
   return (
     <FlexBetween
-      mt="50px"
+      mt={{ lg: "182px", md: "140px", sm: "80px", xs: "50px" }}
       position="relative"
-      mb="90px"
       flexDirection={{ xl: "row", xs: "column" }}
       gap={{ xl: "0", xs: "40px" }}
     >
-      <Stack width={{ xl: "45%", md: "70%", xs: "100%" }} pl="20px">
+      <Stack width={{ xl: "45%", md: "70%", xs: "100%" }} pl={{ sm: "20px", xs: "0" }}>
         <Text fw="500" fs="30px">
           {name}
         </Text>
-        <Text fw="600" fontSize={{ lg: "75px", md: "60px", xs: "40px" }} mt={{ xl: "100px", xs: "50px" }}>
+        <Text fw="600" fontSize={{ lg: "75px", md: "60px", xs: "40px" }} mt={{ xl: "80px", sm: "50px", xs: "30px" }}>
           {title} <span style={{ color: "var(--primary)" }}>{markedWord}</span>
         </Text>
 
-        <Stack gap="10px" mt="20px">
+        <Stack gap="10px" mt="27px">
           {descriptions.map((item, index) => (
             <Text key={index} fs="23px">
               {item}
@@ -29,7 +28,7 @@ const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, sta
           ))}
         </Stack>
 
-        <FlexWrapper mt="40px" gap="30px" flexDirection={{ md: "row", xs: "column" }}>
+        <FlexWrapper mt={{ lg: "66px", md: "50px", xs: "25px" }} gap="24px" flexDirection={{ md: "row", xs: "column" }}>
           <a href={startUrl}>
             <CustomButton sx={{ width: "300px" }}>Get Started Now</CustomButton>
           </a>
@@ -55,7 +54,7 @@ const StepDetail: React.FC<stepDetailType> = ({ demoUrl, descriptions, name, sta
           height={{ xl: "276px", md: "230px", sm: "160px", xs: "80px" }}
           bgcolor="#8B8B8B"
           position="absolute"
-          bottom={{ xl: "-90px", md: "-60px", sm: "-30px", xs: "0" }}
+          bottom={{ xl: "-80px", md: "-60px", sm: "-30px", xs: "0" }}
           right={{ xl: "150px", md: "120px", sm: "100px", xs: "50px" }}
           zIndex={-1}
         />
